@@ -1,0 +1,12 @@
+C:\Kamil\Projekty\total_care_manager\backend\src\Shared\TotalCareManager.Shared\bin\Debug\net8.0\TotalCareManager.Shared.deps.json
+C:\Kamil\Projekty\total_care_manager\backend\src\Shared\TotalCareManager.Shared\bin\Debug\net8.0\TotalCareManager.Shared.dll
+C:\Kamil\Projekty\total_care_manager\backend\src\Shared\TotalCareManager.Shared\bin\Debug\net8.0\TotalCareManager.Shared.pdb
+C:\Kamil\Projekty\total_care_manager\backend\src\Shared\TotalCareManager.Shared\obj\Debug\net8.0\TotalCareManager.Shared.csproj.AssemblyReference.cache
+C:\Kamil\Projekty\total_care_manager\backend\src\Shared\TotalCareManager.Shared\obj\Debug\net8.0\TotalCareManager.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Kamil\Projekty\total_care_manager\backend\src\Shared\TotalCareManager.Shared\obj\Debug\net8.0\TotalCareManager.Shared.AssemblyInfoInputs.cache
+C:\Kamil\Projekty\total_care_manager\backend\src\Shared\TotalCareManager.Shared\obj\Debug\net8.0\TotalCareManager.Shared.AssemblyInfo.cs
+C:\Kamil\Projekty\total_care_manager\backend\src\Shared\TotalCareManager.Shared\obj\Debug\net8.0\TotalCareManager.Shared.csproj.CoreCompileInputs.cache
+C:\Kamil\Projekty\total_care_manager\backend\src\Shared\TotalCareManager.Shared\obj\Debug\net8.0\TotalCareManager.Shared.dll
+C:\Kamil\Projekty\total_care_manager\backend\src\Shared\TotalCareManager.Shared\obj\Debug\net8.0\refint\TotalCareManager.Shared.dll
+C:\Kamil\Projekty\total_care_manager\backend\src\Shared\TotalCareManager.Shared\obj\Debug\net8.0\TotalCareManager.Shared.pdb
+C:\Kamil\Projekty\total_care_manager\backend\src\Shared\TotalCareManager.Shared\obj\Debug\net8.0\ref\TotalCareManager.Shared.dll

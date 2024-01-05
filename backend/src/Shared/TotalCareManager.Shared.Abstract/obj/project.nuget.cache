@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "3/8W0be8EHJR7TB/0ZbXG+4VLRXglU/K193v0N8aq+lPS5JmY+F4chhmnGkfjT1nyKH7Ne0WQ+4ad1V4G5ac8A==",
+  "success": true,
+  "projectFilePath": "C:\\Kamil\\Projekty\\total_care_manager\\backend\\src\\Shared\\TotalCareManager.Shared.Abstract\\TotalCareManager.Shared.Abstract.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\48501\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\48501\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\48501\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

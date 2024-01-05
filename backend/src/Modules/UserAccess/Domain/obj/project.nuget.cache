@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "q1i1Wk3G4WYe80P+XkRhqBHkitMyIr01L6eHgyRfxSBqVk9YYcXk3NhMIP6+H3JHdDXKK/EIhBQz16cVMRJAPw==",
+  "success": true,
+  "projectFilePath": "C:\\Kamil\\Projekty\\total_care_manager\\backend\\src\\Modules\\UserAccess\\Domain\\UserAccess.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\48501\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\48501\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\48501\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

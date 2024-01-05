@@ -1,0 +1,15 @@
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\bin\Debug\net8.0\UserAccess.Aplication.deps.json
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\bin\Debug\net8.0\UserAccess.Aplication.dll
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\bin\Debug\net8.0\UserAccess.Aplication.pdb
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\bin\Debug\net8.0\TotalCareManager.Shared.dll
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\bin\Debug\net8.0\TotalCareManager.Shared.pdb
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\obj\Debug\net8.0\UserAccess.Aplication.csproj.AssemblyReference.cache
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\obj\Debug\net8.0\UserAccess.Aplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\obj\Debug\net8.0\UserAccess.Aplication.AssemblyInfoInputs.cache
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\obj\Debug\net8.0\UserAccess.Aplication.AssemblyInfo.cs
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\obj\Debug\net8.0\UserAccess.Aplication.csproj.CoreCompileInputs.cache
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\obj\Debug\net8.0\UserAccess.Aplication.csproj.CopyComplete
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\obj\Debug\net8.0\UserAccess.Aplication.dll
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\obj\Debug\net8.0\refint\UserAccess.Aplication.dll
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\obj\Debug\net8.0\UserAccess.Aplication.pdb
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\obj\Debug\net8.0\ref\UserAccess.Aplication.dll
