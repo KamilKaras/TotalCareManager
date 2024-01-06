@@ -13,3 +13,6 @@ C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\o
 C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\obj\Debug\net8.0\refint\UserAccess.Aplication.dll
 C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\obj\Debug\net8.0\UserAccess.Aplication.pdb
 C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\obj\Debug\net8.0\ref\UserAccess.Aplication.dll
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\obj\Debug\net8.0\UserAccess.Aplication.sourcelink.json
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\bin\Debug\net8.0\UserAccess.Domain.dll
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Aplication\bin\Debug\net8.0\UserAccess.Domain.pdb

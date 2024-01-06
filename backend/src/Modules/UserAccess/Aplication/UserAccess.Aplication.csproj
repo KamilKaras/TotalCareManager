@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Shared\TotalCareManager.Shared\TotalCareManager.Shared.csproj" />
+    <ProjectReference Include="..\Domain\UserAccess.Domain.csproj" />
   </ItemGroup>
 
 </Project>

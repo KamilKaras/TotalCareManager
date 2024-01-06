@@ -95,10 +95,19 @@
       },
       "UserAccess.Aplication/1.0.0": {
         "dependencies": {
-          "TotalCareManager.Shared": "1.0.0"
+          "TotalCareManager.Shared": "1.0.0",
+          "UserAccess.Domain": "1.0.0"
         },
         "runtime": {
           "UserAccess.Aplication.dll": {}
+        }
+      },
+      "UserAccess.Domain/1.0.0": {
+        "dependencies": {
+          "TotalCareManager.Shared": "1.0.0"
+        },
+        "runtime": {
+          "UserAccess.Domain.dll": {}
         }
       },
       "UserAccess.Infrastructure/1.0.0": {
@@ -186,6 +195,11 @@
       "sha512": ""
     },
     "UserAccess.Aplication/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UserAccess.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

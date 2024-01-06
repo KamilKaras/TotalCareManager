@@ -38,3 +38,6 @@ C:\Kamil\Projekty\total_care_manager\backend\src\Api\TotalCareManager.Api\obj\De
 C:\Kamil\Projekty\total_care_manager\backend\src\Api\TotalCareManager.Api\obj\Debug\net8.0\TotalCareManager.Api.pdb
 C:\Kamil\Projekty\total_care_manager\backend\src\Api\TotalCareManager.Api\obj\Debug\net8.0\TotalCareManager.Api.genruntimeconfig.cache
 C:\Kamil\Projekty\total_care_manager\backend\src\Api\TotalCareManager.Api\obj\Debug\net8.0\ref\TotalCareManager.Api.dll
+C:\Kamil\Projekty\total_care_manager\backend\src\Api\TotalCareManager.Api\obj\Debug\net8.0\TotalCareManager.Api.sourcelink.json
+C:\Kamil\Projekty\total_care_manager\backend\src\Api\TotalCareManager.Api\bin\Debug\net8.0\UserAccess.Domain.dll
+C:\Kamil\Projekty\total_care_manager\backend\src\Api\TotalCareManager.Api\bin\Debug\net8.0\UserAccess.Domain.pdb

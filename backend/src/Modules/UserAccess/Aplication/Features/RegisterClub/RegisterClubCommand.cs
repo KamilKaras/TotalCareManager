@@ -2,31 +2,31 @@
 
 namespace UserAccess.Aplication.Features.RegisterGroup
 {
-    public sealed class RegisterGroupCommand : ICommand<int>
+    public sealed class RegisterClubCommand : ICommand<Guid>
     {
-        public RegisterGroupCommand(
+        public RegisterClubCommand(
             string groupName,
             string nipNumber,
             string companyName,
-            string name,
-            string email,
-            string phone
+            string userName,
+            string userEmail,
+            string userPhone
 
             )
         {
             GroupName = groupName;
-            Name = name;
-            Email = email;
-            Phone = phone;
             NipNumber = nipNumber;
             CompanyName = companyName;
+            UserName = userName;
+            UserEmail = userEmail;
+            UserPhone = userPhone;
         }
 
         public string GroupName { get; init; }
-        public string Name { get; init; }
-        public string Email { get; init; }
-        public string Phone { get; init; }
         public string NipNumber { get; init; }
         public string CompanyName { get; init; }
+        public string UserName { get; init; }
+        public string UserEmail { get; init; }
+        public string UserPhone { get; init; }
     }
 }

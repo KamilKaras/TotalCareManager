@@ -10,3 +10,4 @@ C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Infrastructu
 C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Infrastructure\obj\Debug\net8.0\refint\UserAccess.Infrastructure.dll
 C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Infrastructure\obj\Debug\net8.0\UserAccess.Infrastructure.pdb
 C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Infrastructure\obj\Debug\net8.0\ref\UserAccess.Infrastructure.dll
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\Infrastructure\obj\Debug\net8.0\UserAccess.Infrastructure.sourcelink.json
