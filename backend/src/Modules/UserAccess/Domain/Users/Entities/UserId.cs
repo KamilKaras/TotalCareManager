@@ -1,6 +1,6 @@
 ﻿using TotalCareManager.Shared.Domain;
 
-namespace UserAccess.Domain.Groups.Entities
+namespace UserAccess.Domain.Users.Entities
 {
     public sealed record UserId : EntityId
     {

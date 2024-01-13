@@ -29,18 +29,18 @@ namespace TotalCareManager.Api.Modules.UserAccess.Controllers
             return OkOrNotFound(id);
         }
 
-        [HttpPost("register-group")]
+        [HttpPost("register-club")]
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<int>> RegisterGroup(GroupRegisterRequest request)
+        public async Task<ActionResult<Guid>> RegisterClub(ClubRegisterRequest request)
         {
-            var command = new RegisterGroupCommand(
-                request.GroupName,
+            var command = new RegisterClubCommand(
+                request.ClubName,
                 request.NipNumber,
                 request.CompanyName,
-                request.Name,
-                request.Email,
-                request.Phone
+                request.UserName,
+                request.UserEmail,
+                request.UserPhone
                 );
             var id = await _commandBus.Execute(command);
             return OkOrNotFound(id);

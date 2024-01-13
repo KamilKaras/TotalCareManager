@@ -9,3 +9,4 @@ C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\IntegrationE
 C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\IntegrationEvents\obj\Debug\net8.0\refint\UserAccess.IntegratonEvents.dll
 C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\IntegrationEvents\obj\Debug\net8.0\UserAccess.IntegratonEvents.pdb
 C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\IntegrationEvents\obj\Debug\net8.0\ref\UserAccess.IntegratonEvents.dll
+C:\Kamil\Projekty\total_care_manager\backend\src\Modules\UserAccess\IntegrationEvents\obj\Debug\net8.0\UserAccess.IntegratonEvents.sourcelink.json

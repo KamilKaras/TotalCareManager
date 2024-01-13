@@ -152,13 +152,27 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "TotalCareManager.Shared": "1.0.0"
+          "TotalCareManager.Shared": "1.0.0",
+          "UserAccess.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/UserAccess.Aplication.dll": {}
         },
         "runtime": {
           "bin/placeholder/UserAccess.Aplication.dll": {}
+        }
+      },
+      "UserAccess.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "TotalCareManager.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UserAccess.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UserAccess.Domain.dll": {}
         }
       },
       "UserAccess.Infrastructure/1.0.0": {
@@ -577,6 +591,11 @@
       "type": "project",
       "path": "../../Modules/UserAccess/Aplication/UserAccess.Aplication.csproj",
       "msbuildProject": "../../Modules/UserAccess/Aplication/UserAccess.Aplication.csproj"
+    },
+    "UserAccess.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../Modules/UserAccess/Domain/UserAccess.Domain.csproj",
+      "msbuildProject": "../../Modules/UserAccess/Domain/UserAccess.Domain.csproj"
     },
     "UserAccess.Infrastructure/1.0.0": {
       "type": "project",

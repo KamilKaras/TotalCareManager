@@ -1,6 +1,7 @@
 ﻿using TotalCareManager.Shared.Domain;
+using UserAccess.Domain.Clubs.Entities;
 
-namespace UserAccess.Domain.Groups.Entities
+namespace UserAccess.Domain.Users.Entities
 {
     public sealed class User : Entity<UserId>
     {
@@ -9,18 +10,17 @@ namespace UserAccess.Domain.Groups.Entities
         private readonly string _phone;
         private readonly DateTimeOffset _createdAt = DateTimeOffset.UtcNow;
         private string _password;
-        private HashSet<GroupId> _ownerOfGroupIds = new HashSet<GroupId>();
-        private HashSet<GroupId> _memberOfGroupIds = new HashSet<GroupId>();
+        private HashSet<ClubId> _ownerOfGroupIds = new HashSet<ClubId>();
+        private HashSet<ClubId> _memberOfGroupIds = new HashSet<ClubId>();
 
         public User(
-            UserId id,
             string name,
             string email,
             string phone,
             string password
             )
         {
-            Id = id;
+            Id = new UserId(Guid.NewGuid());
             _name = name;
             _email = email;
             _phone = phone;
@@ -32,7 +32,7 @@ namespace UserAccess.Domain.Groups.Entities
             //EF core
         }
 
-        public void BecomeGroupOwner(GroupId groupId)
+        public void BecomeGroupOwner(ClubId groupId)
         {
             _ownerOfGroupIds.Add(groupId);
         }
