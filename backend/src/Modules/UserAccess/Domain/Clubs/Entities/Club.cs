@@ -6,28 +6,32 @@ namespace UserAccess.Domain.Clubs.Entities
 {
     public sealed class Club : Entity<ClubId>
     {
-        private readonly UserId _groupOwnerId;
         private readonly ClubType _clubType;
+        private UserId? _groupOwnerId;
+        private HashSet<UserId> _clubMembers;
         private string _groupName;
 
         public Club(
             string groupName,
-            UserId groupOwnerId,
             ClubType clubType
             )
         {
             Id = new ClubId(Guid.NewGuid());
             _groupName = groupName;
-            _groupOwnerId = groupOwnerId;
             _clubType = clubType;
         }
 
-        public void ChangeGroupName(string groupName)
+        public void ChangeClubName(string groupName)
         {
             if (_groupName == groupName)
                 return;
 
             _groupName = groupName;
+        }
+
+        public void AddClubMember(UserId newMember)
+        {
+            _clubMembers.Add(newMember);
         }
     }
 }

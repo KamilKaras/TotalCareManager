@@ -5,7 +5,8 @@ namespace UserAccess.Aplication.Features.RegisterGroup
     public sealed class RegisterClubCommand : ICommand<Guid>
     {
         public RegisterClubCommand(
-            string groupName,
+            string clubName,
+            int clubTypeId,
             string nipNumber,
             string companyName,
             string userName,
@@ -14,7 +15,8 @@ namespace UserAccess.Aplication.Features.RegisterGroup
 
             )
         {
-            GroupName = groupName;
+            ClubName = clubName;
+            ClubTypeId = clubTypeId;
             NipNumber = nipNumber;
             CompanyName = companyName;
             UserName = userName;
@@ -22,7 +24,8 @@ namespace UserAccess.Aplication.Features.RegisterGroup
             UserPhone = userPhone;
         }
 
-        public string GroupName { get; init; }
+        public string ClubName { get; init; }
+        public int ClubTypeId { get; }
         public string NipNumber { get; init; }
         public string CompanyName { get; init; }
         public string UserName { get; init; }

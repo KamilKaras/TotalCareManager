@@ -17,9 +17,8 @@ namespace UserAccess.Aplication.Features.RegisterGroup
                 );
 
             var newClub = new Club(
-                command.GroupName,
-                newUser.Id,
-                ClubType.FightClub
+                command.ClubName,
+                ClubType.FromId(command.ClubTypeId)
                 );
 
             return newClub.Id.Value;

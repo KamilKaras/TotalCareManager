@@ -15,6 +15,24 @@ namespace TotalCareManager.Api.Modules.UserAccess.Controllers
         {
         }
 
+        [HttpPost("register-club")]
+        [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<Guid>> RegisterClub(ClubRegisterRequest request)
+        {
+            var command = new RegisterClubCommand(
+                request.ClubName,
+                request.ClubTypeId,
+                request.NipNumber,
+                request.CompanyName,
+                request.UserName,
+                request.UserEmail,
+                request.UserPhone
+                );
+            var id = await _commandBus.Execute(command);
+            return OkOrNotFound(id);
+        }
+
         [HttpPost("register-user")]
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -24,23 +42,6 @@ namespace TotalCareManager.Api.Modules.UserAccess.Controllers
                 request.Name,
                 request.Email,
                 request.Phone
-                );
-            var id = await _commandBus.Execute(command);
-            return OkOrNotFound(id);
-        }
-
-        [HttpPost("register-club")]
-        [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Guid>> RegisterClub(ClubRegisterRequest request)
-        {
-            var command = new RegisterClubCommand(
-                request.ClubName,
-                request.NipNumber,
-                request.CompanyName,
-                request.UserName,
-                request.UserEmail,
-                request.UserPhone
                 );
             var id = await _commandBus.Execute(command);
             return OkOrNotFound(id);
