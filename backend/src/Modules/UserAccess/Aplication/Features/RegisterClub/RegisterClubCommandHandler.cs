@@ -3,13 +3,13 @@ using UserAccess.Domain.Clubs.Entities;
 using UserAccess.Domain.Clubs.Enumerations;
 using UserAccess.Domain.Users.Entities;
 
-namespace UserAccess.Aplication.Features.RegisterGroup
+namespace UserAccess.Aplication.Features.RegisterClub
 {
     internal sealed class RegisterClubCommandHandler : CommandHandler<RegisterClubCommand, Guid>
     {
         protected override async Task<Guid> Handle(RegisterClubCommand command)
         {
-            var newUser = new User(
+            var newUser = new UserRegistration(
                 command.UserName,
                 command.UserEmail,
                 command.UserPhone,

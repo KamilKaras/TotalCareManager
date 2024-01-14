@@ -2,9 +2,9 @@
 
 namespace UserAccess.Domain.Users.Entities
 {
-    public sealed record UserId : EntityId
+    public sealed record UserRegistrationId : EntityId
     {
-        public UserId(Guid value) : base(value)
+        public UserRegistrationId(Guid value) : base(value)
         {
         }
     }

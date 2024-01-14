@@ -7,7 +7,7 @@ namespace UserAccess.Domain.Clubs.Entities
     public sealed class ClubRegistration : Entity<ClubRegistrationId>
     {
         private readonly ClubType _clubType;
-        private UserId? _groupOwnerId;
+        private UserRegistrationId? _groupOwnerId;
         private string _groupName;
 
         public ClubRegistration(

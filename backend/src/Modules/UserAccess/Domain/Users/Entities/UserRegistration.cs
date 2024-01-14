@@ -3,7 +3,7 @@ using UserAccess.Domain.Clubs.Entities;
 
 namespace UserAccess.Domain.Users.Entities
 {
-    public sealed class User : Entity<UserId>
+    public sealed class UserRegistration : Entity<UserRegistrationId>
     {
         private readonly string _name;
         private readonly string _email;
@@ -13,21 +13,21 @@ namespace UserAccess.Domain.Users.Entities
         private HashSet<ClubRegistrationId> _ownerOfGroupIds = new HashSet<ClubRegistrationId>();
         private HashSet<ClubRegistrationId> _memberOfGroupIds = new HashSet<ClubRegistrationId>();
 
-        public User(
+        public UserRegistration(
             string name,
             string email,
             string phone,
             string password
             )
         {
-            Id = new UserId(Guid.NewGuid());
+            Id = new UserRegistrationId(Guid.NewGuid());
             _name = name;
             _email = email;
             _phone = phone;
             _password = password;
         }
 
-        private User()
+        private UserRegistration()
         {
             //EF core
         }

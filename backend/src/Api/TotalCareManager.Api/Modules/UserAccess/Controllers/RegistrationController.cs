@@ -2,7 +2,7 @@
 using TotalCareManager.Api.Modules.UserAccess.Requests;
 using TotalCareManager.Api.Shared.Controllers;
 using TotalCareManager.Shared.Messaging;
-using UserAccess.Aplication.Features.RegisterGroup;
+using UserAccess.Aplication.Features.RegisterClub;
 using UserAccess.Aplication.Features.RegisterUser;
 
 namespace TotalCareManager.Api.Modules.UserAccess.Controllers

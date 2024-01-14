@@ -1,6 +1,6 @@
 ﻿using TotalCareManager.Shared.Messaging;
 
-namespace UserAccess.Aplication.Features.RegisterGroup
+namespace UserAccess.Aplication.Features.RegisterClub
 {
     public sealed class RegisterClubCommand : ICommand<Guid>
     {
