@@ -2,9 +2,9 @@
 
 namespace UserAccess.Domain.Clubs.Entities
 {
-    public sealed record ClubId : EntityId
+    public sealed record ClubRegistrationId : EntityId
     {
-        public ClubId(Guid value) : base(value)
+        public ClubRegistrationId(Guid value) : base(value)
         {
         }
     }

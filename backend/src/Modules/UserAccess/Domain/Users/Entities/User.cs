@@ -10,8 +10,8 @@ namespace UserAccess.Domain.Users.Entities
         private readonly string _phone;
         private readonly DateTimeOffset _createdAt = DateTimeOffset.UtcNow;
         private string _password;
-        private HashSet<ClubId> _ownerOfGroupIds = new HashSet<ClubId>();
-        private HashSet<ClubId> _memberOfGroupIds = new HashSet<ClubId>();
+        private HashSet<ClubRegistrationId> _ownerOfGroupIds = new HashSet<ClubRegistrationId>();
+        private HashSet<ClubRegistrationId> _memberOfGroupIds = new HashSet<ClubRegistrationId>();
 
         public User(
             string name,
@@ -32,7 +32,7 @@ namespace UserAccess.Domain.Users.Entities
             //EF core
         }
 
-        public void BecomeGroupOwner(ClubId groupId)
+        public void BecomeGroupOwner(ClubRegistrationId groupId)
         {
             _ownerOfGroupIds.Add(groupId);
         }

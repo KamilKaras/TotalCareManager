@@ -4,19 +4,18 @@ using UserAccess.Domain.Users.Entities;
 
 namespace UserAccess.Domain.Clubs.Entities
 {
-    public sealed class Club : Entity<ClubId>
+    public sealed class ClubRegistration : Entity<ClubRegistrationId>
     {
         private readonly ClubType _clubType;
         private UserId? _groupOwnerId;
-        private HashSet<UserId> _clubMembers;
         private string _groupName;
 
-        public Club(
+        public ClubRegistration(
             string groupName,
             ClubType clubType
             )
         {
-            Id = new ClubId(Guid.NewGuid());
+            Id = new ClubRegistrationId(Guid.NewGuid());
             _groupName = groupName;
             _clubType = clubType;
         }
@@ -27,11 +26,6 @@ namespace UserAccess.Domain.Clubs.Entities
                 return;
 
             _groupName = groupName;
-        }
-
-        public void AddClubMember(UserId newMember)
-        {
-            _clubMembers.Add(newMember);
         }
     }
 }

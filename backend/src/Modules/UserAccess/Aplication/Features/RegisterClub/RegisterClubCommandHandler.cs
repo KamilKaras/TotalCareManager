@@ -16,7 +16,7 @@ namespace UserAccess.Aplication.Features.RegisterGroup
                 "testPassword"
                 );
 
-            var newClub = new Club(
+            var newClub = new ClubRegistration(
                 command.ClubName,
                 ClubType.FromId(command.ClubTypeId)
                 );
