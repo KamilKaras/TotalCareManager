@@ -6,26 +6,57 @@ namespace UserAccess.Domain.Clubs.Entities
 {
     public sealed class ClubRegistration : Entity<ClubRegistrationId>
     {
-        private readonly ClubType _clubType;
-        private UserRegistrationId? _groupOwnerId;
-        private string _groupName;
+        private readonly DateTimeOffset _registeredAt = DateTimeOffset.UtcNow;
+        private DateTimeOffset? _confirmedAt;
+        private ClubType _clubType;
+        private string _clubName;
+        private string _clubNip;
+        private UserRegistrationId? _clubOwner;
 
         public ClubRegistration(
-            string groupName,
+            string clubName,
+            string clubNip,
             ClubType clubType
             )
         {
             Id = new ClubRegistrationId(Guid.NewGuid());
-            _groupName = groupName;
+            _clubName = clubName;
+            _clubNip = clubNip;
             _clubType = clubType;
         }
 
-        public void ChangeClubName(string groupName)
+        protected ClubRegistration()
         {
-            if (_groupName == groupName)
+            // EF
+        }
+
+        public void ChangeClubOwner(UserRegistrationId ownerId)
+        {
+            if (_clubOwner == ownerId)
                 return;
 
-            _groupName = groupName;
+            _clubOwner = ownerId;
+        }
+
+        public void ChangeClubName(string clubName)
+        {
+            if (_clubName == clubName)
+                return;
+
+            _clubName = clubName;
+        }
+
+        public void ChangeClubType(ClubType clubType)
+        {
+            if (_clubType == clubType)
+                return;
+
+            _clubType = clubType;
+        }
+
+        public void Confirm()
+        {
+            _confirmedAt = DateTimeOffset.UtcNow;
         }
     }
 }
