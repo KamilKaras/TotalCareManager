@@ -1,4 +1,4 @@
-﻿using TotalCareManager.Shared.Messaging;
+﻿using TotalCareManager.Shared.Messaging.Command;
 using UserAccess.Domain.Clubs.Entities;
 using UserAccess.Domain.Clubs.Enumerations;
 using UserAccess.Domain.Users.Entities;

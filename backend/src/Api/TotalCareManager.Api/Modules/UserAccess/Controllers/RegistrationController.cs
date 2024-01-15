@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TotalCareManager.Api.Modules.UserAccess.Requests;
 using TotalCareManager.Api.Shared.Controllers;
-using TotalCareManager.Shared.Messaging;
+using TotalCareManager.Shared.Messaging.Command;
 using UserAccess.Aplication.Features.RegisterClub;
 using UserAccess.Aplication.Features.RegisterUser;
 

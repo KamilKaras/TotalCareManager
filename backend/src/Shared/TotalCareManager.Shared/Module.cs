@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using TotalCareManager.Shared.Domain;
-using TotalCareManager.Shared.Messaging;
+using TotalCareManager.Shared.Messaging.Command;
 
 namespace TotalCareManager.Shared
 {
