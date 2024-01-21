@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace TotalCareManager.Shared.Messaging
+namespace TotalCareManager.Shared.Messaging.Command
 {
     public abstract class CommandHandler<TCommand> : IRequestHandler<TCommand, Unit>
         where TCommand : ICommand

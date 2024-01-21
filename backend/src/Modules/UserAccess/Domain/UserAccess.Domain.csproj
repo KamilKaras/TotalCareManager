@@ -10,4 +10,8 @@
     <ProjectReference Include="..\..\..\Shared\TotalCareManager.Shared\TotalCareManager.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ClubRegistrations\Events\" />
+  </ItemGroup>
+
 </Project>

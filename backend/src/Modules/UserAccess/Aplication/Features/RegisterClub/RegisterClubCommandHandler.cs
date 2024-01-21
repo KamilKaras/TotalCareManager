@@ -1,23 +1,24 @@
-﻿using TotalCareManager.Shared.Messaging;
-using UserAccess.Domain.Clubs.Entities;
-using UserAccess.Domain.Clubs.Enumerations;
-using UserAccess.Domain.Users.Entities;
+﻿using TotalCareManager.Shared.Messaging.Command;
+using UserAccess.Domain.ClubRegistrations.Entities;
+using UserAccess.Domain.ClubRegistrations.Enumerations;
+using UserAccess.Domain.UserRegistrations.Entities;
 
-namespace UserAccess.Aplication.Features.RegisterGroup
+namespace UserAccess.Aplication.Features.RegisterClub
 {
     internal sealed class RegisterClubCommandHandler : CommandHandler<RegisterClubCommand, Guid>
     {
         protected override async Task<Guid> Handle(RegisterClubCommand command)
         {
-            var newUser = new User(
+            var newUser = new UserRegistration(
                 command.UserName,
                 command.UserEmail,
                 command.UserPhone,
                 "testPassword"
                 );
 
-            var newClub = new Club(
+            var newClub = new ClubRegistration(
                 command.ClubName,
+                command.NipNumber,
                 ClubType.FromId(command.ClubTypeId)
                 );
 

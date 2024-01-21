@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TotalCareManager.Api.Modules.UserAccess.Requests;
 using TotalCareManager.Api.Shared.Controllers;
-using TotalCareManager.Shared.Messaging;
-using UserAccess.Aplication.Features.RegisterGroup;
+using TotalCareManager.Shared.Messaging.Command;
+using TotalCareManager.Shared.Messaging.Query;
+using UserAccess.Aplication.Features.RegisterClub;
 using UserAccess.Aplication.Features.RegisterUser;
 
 namespace TotalCareManager.Api.Modules.UserAccess.Controllers
@@ -11,7 +12,8 @@ namespace TotalCareManager.Api.Modules.UserAccess.Controllers
     [ApiController]
     public class RegistrationController : BaseController
     {
-        public RegistrationController(ICommandBus commandBus) : base(commandBus)
+        public RegistrationController(ICommandBus commandBus, IQueryBus queryBus)
+            : base(commandBus, queryBus)
         {
         }
 

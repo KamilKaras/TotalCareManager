@@ -1,6 +1,6 @@
 ﻿using TotalCareManager.Shared.Domain;
 
-namespace UserAccess.Domain.Clubs.Enumerations
+namespace UserAccess.Domain.ClubRegistrations.Enumerations
 {
     public sealed class ClubType : Enumeration<ClubType>
     {
