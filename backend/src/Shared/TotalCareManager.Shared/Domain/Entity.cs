@@ -23,7 +23,7 @@ namespace TotalCareManager.Shared.Domain
         {
             _domainEvents ??= new List<DomainEvent>();
 
-            this._domainEvents.Add(domainEvent);
+            _domainEvents.Add(domainEvent);
         }
 
         protected void CheckRule(IBusinessRule rule)

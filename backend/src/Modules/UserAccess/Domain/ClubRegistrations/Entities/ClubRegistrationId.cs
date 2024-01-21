@@ -1,6 +1,6 @@
 ﻿using TotalCareManager.Shared.Domain;
 
-namespace UserAccess.Domain.Clubs.Entities
+namespace UserAccess.Domain.ClubRegistrations.Entities
 {
     public sealed record ClubRegistrationId : EntityId
     {

@@ -1,4 +1,6 @@
+using MediatR.NotificationPublishers;
 using TotalCareManager.Shared;
+using UserAccess.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,8 +13,10 @@ builder.Services.AddMediatR(cfg =>
         UserAccess.Aplication.AssemblyReference.Assembly,
         UserAccess.Infrastructure.AssemblyReference.Assembly
     )
+    .NotificationPublisher = new TaskWhenAllPublisher()
 );
 
+builder.Services.AddInfrastructure();
 builder.Services.AddBus();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

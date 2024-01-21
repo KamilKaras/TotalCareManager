@@ -1,8 +1,8 @@
 ﻿using TotalCareManager.Shared.Domain;
-using UserAccess.Domain.Clubs.Enumerations;
-using UserAccess.Domain.Users.Entities;
+using UserAccess.Domain.ClubRegistrations.Enumerations;
+using UserAccess.Domain.UserRegistrations.Entities;
 
-namespace UserAccess.Domain.Clubs.Entities
+namespace UserAccess.Domain.ClubRegistrations.Entities
 {
     public sealed class ClubRegistration : Entity<ClubRegistrationId>
     {

@@ -11,4 +11,12 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\TotalCareManager.Shared\TotalCareManager.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Options\" />
+  </ItemGroup>
+
 </Project>

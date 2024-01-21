@@ -1,7 +1,7 @@
 ﻿using TotalCareManager.Shared.Messaging.Command;
-using UserAccess.Domain.Clubs.Entities;
-using UserAccess.Domain.Clubs.Enumerations;
-using UserAccess.Domain.Users.Entities;
+using UserAccess.Domain.ClubRegistrations.Entities;
+using UserAccess.Domain.ClubRegistrations.Enumerations;
+using UserAccess.Domain.UserRegistrations.Entities;
 
 namespace UserAccess.Aplication.Features.RegisterClub
 {
@@ -18,6 +18,7 @@ namespace UserAccess.Aplication.Features.RegisterClub
 
             var newClub = new ClubRegistration(
                 command.ClubName,
+                command.NipNumber,
                 ClubType.FromId(command.ClubTypeId)
                 );
 
