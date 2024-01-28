@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using TotalCareManager.Shared.Messaging.Events.IntegrationEvents;
+using TotalCareManager.Shared.Domain;
 
 namespace TotalCareManager.Shared.Messaging.Events.EventBus
 {
@@ -17,7 +17,7 @@ namespace TotalCareManager.Shared.Messaging.Events.EventBus
         {
         }
 
-        public async Task Publish(IIntegrationEvent @event)
+        public async Task Publish(IDomainEvent @event)
         {
             using var scope = _scope.CreateScope();
             var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();

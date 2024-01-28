@@ -1,4 +1,5 @@
 using MediatR.NotificationPublishers;
+using Microsoft.EntityFrameworkCore;
 using TotalCareManager.Shared;
 using UserAccess.Infrastructure;
 
@@ -17,7 +18,7 @@ builder.Services.AddMediatR(cfg =>
 );
 
 builder.Services.AddInfrastructure();
-builder.Services.AddBus();
+builder.Services.AddShared<DbContext>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
