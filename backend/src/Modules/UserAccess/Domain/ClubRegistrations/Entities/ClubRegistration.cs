@@ -1,5 +1,6 @@
 ﻿using TotalCareManager.Shared.Domain;
 using UserAccess.Domain.ClubRegistrations.Enumerations;
+using UserAccess.Domain.ClubRegistrations.Events;
 using UserAccess.Domain.UserRegistrations.Entities;
 
 namespace UserAccess.Domain.ClubRegistrations.Entities
@@ -23,6 +24,8 @@ namespace UserAccess.Domain.ClubRegistrations.Entities
             _clubName = clubName;
             _clubNip = clubNip;
             _clubType = clubType;
+
+            AddDomainEvent(new ClubRegisterDomainEvent(Id, "", "", ""));
         }
 
         protected ClubRegistration()

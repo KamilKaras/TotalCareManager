@@ -23,10 +23,7 @@ namespace TotalCareManager.Api.Modules.UserAccess.Controllers
         public async Task<ActionResult<Guid>> RegisterClub(ClubRegisterRequest request)
         {
             var command = new RegisterClubCommand(
-                request.ClubName,
                 request.ClubTypeId,
-                request.NipNumber,
-                request.CompanyName,
                 request.UserName,
                 request.UserEmail,
                 request.UserPhone

@@ -1,9 +1,9 @@
-﻿using TotalCareManager.Shared.Messaging.Events.IntegrationEvents;
+﻿using TotalCareManager.Shared.Domain;
 
 namespace TotalCareManager.Shared.Messaging.Events.EventBus
 {
     public interface IEventBus : IDisposable
     {
-        Task Publish(IIntegrationEvent @event);
+        Task Publish(IDomainEvent @event);
     }
 }
