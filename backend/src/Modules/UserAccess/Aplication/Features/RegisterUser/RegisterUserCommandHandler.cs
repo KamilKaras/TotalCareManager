@@ -1,4 +1,4 @@
-﻿using TotalCareManager.Shared.Messaging.Command;
+﻿using TotalCareManager.Shared.Messaging.Command.Implementations;
 
 namespace UserAccess.Aplication.Features.RegisterUser
 {

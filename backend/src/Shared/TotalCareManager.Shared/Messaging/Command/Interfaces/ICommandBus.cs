@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace TotalCareManager.Shared.Messaging.Command
+namespace TotalCareManager.Shared.Messaging.Command.Interfaces
 {
     public interface ICommand : IRequest<Unit>
     {

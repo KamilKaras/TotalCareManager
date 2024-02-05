@@ -1,10 +1,11 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using TotalCareManager.Shared.Domain;
+using TotalCareManager.Shared.Domain.Interfaces;
+using TotalCareManager.Shared.Messaging.Events.EventBus.Interfaces;
 
-namespace TotalCareManager.Shared.Messaging.Events.EventBus
+namespace TotalCareManager.Shared.Messaging.Events.EventBus.Implementations
 {
-    public class EventBus : IEventBus
+    internal sealed class EventBus : IEventBus
     {
         private readonly IServiceScopeFactory _scope;
 

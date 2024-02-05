@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace TotalCareManager.Shared.Domain
+namespace TotalCareManager.Shared.Domain.Interfaces
 {
     public interface IDomainEvent : INotification
     {

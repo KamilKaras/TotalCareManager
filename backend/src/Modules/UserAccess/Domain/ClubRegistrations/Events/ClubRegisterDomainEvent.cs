@@ -1,4 +1,4 @@
-﻿using TotalCareManager.Shared.Domain;
+﻿using TotalCareManager.Shared.Domain.Implementations;
 using UserAccess.Domain.ClubRegistrations.Entities;
 
 namespace UserAccess.Domain.ClubRegistrations.Events

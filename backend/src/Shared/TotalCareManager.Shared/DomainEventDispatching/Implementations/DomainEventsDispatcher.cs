@@ -1,9 +1,10 @@
 ﻿using Microsoft.Extensions.Logging;
-using TotalCareManager.Shared.Messaging.Events.EventBus;
+using TotalCareManager.Shared.DomainEventDispatching.Interfaces;
+using TotalCareManager.Shared.Messaging.Events.EventBus.Interfaces;
 
-namespace TotalCareManager.Shared.DomainEventDispatching
+namespace TotalCareManager.Shared.DomainEventDispatching.Implementations
 {
-    public sealed class DomainEventsDispatcher : IDomainEventsDispatcher
+    internal sealed class DomainEventsDispatcher : IDomainEventsDispatcher
     {
         private readonly IEventBus _eventBus;
         private readonly IDomainEventsAccessor _domainEventsAccessor;

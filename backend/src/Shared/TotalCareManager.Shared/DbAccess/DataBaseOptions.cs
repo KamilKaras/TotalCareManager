@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TotalCareManager.Shared.Domain
+namespace TotalCareManager.Shared.DbAccess
 {
-    public interface IAggregateRoot
+    public class DataBaseOptions
     {
+        public string ConnectionString { get; init; }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace TotalCareManager.Shared.DomainEventDispatching
+﻿namespace TotalCareManager.Shared.DomainEventDispatching.Interfaces
 {
     public interface IDomainEventsDispatcher
     {

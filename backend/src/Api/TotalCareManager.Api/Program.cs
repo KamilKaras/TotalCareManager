@@ -1,6 +1,5 @@
 using MediatR.NotificationPublishers;
-using Microsoft.EntityFrameworkCore;
-using TotalCareManager.Shared;
+using TotalCareManager.Shared.DbAccess;
 using UserAccess.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,16 +8,20 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddMediatR(cfg =>
+{
     cfg.RegisterServicesFromAssemblies(
         TotalCareManager.Shared.AssemblyReference.Assembly,
         UserAccess.Aplication.AssemblyReference.Assembly,
         UserAccess.Infrastructure.AssemblyReference.Assembly
     )
-    .NotificationPublisher = new TaskWhenAllPublisher()
+    .NotificationPublisher = new TaskWhenAllPublisher();
+
+    cfg.AddOpenBehavior(typeof(UnitOfWorkBehavior<,>));
+}
+
 );
 
-builder.Services.AddInfrastructure();
-builder.Services.AddShared<DbContext>();
+builder.Services.AddInfrastructure(builder.Configuration);
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
