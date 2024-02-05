@@ -1,6 +1,6 @@
-﻿using TotalCareManager.Shared.Domain;
+﻿using TotalCareManager.Shared.Domain.Interfaces;
 
-namespace TotalCareManager.Shared.DomainEventDispatching
+namespace TotalCareManager.Shared.DomainEventDispatching.Interfaces
 {
     public interface IDomainEventsAccessor
     {

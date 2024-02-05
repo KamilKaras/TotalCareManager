@@ -1,4 +1,5 @@
 using MediatR.NotificationPublishers;
+using TotalCareManager.Shared.DbAccess;
 using UserAccess.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,12 +8,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddMediatR(cfg =>
+{
     cfg.RegisterServicesFromAssemblies(
         TotalCareManager.Shared.AssemblyReference.Assembly,
         UserAccess.Aplication.AssemblyReference.Assembly,
         UserAccess.Infrastructure.AssemblyReference.Assembly
     )
-    .NotificationPublisher = new TaskWhenAllPublisher()
+    .NotificationPublisher = new TaskWhenAllPublisher();
+
+    cfg.AddOpenBehavior(typeof(UnitOfWorkBehavior<,>));
+}
+
 );
 
 builder.Services.AddInfrastructure(builder.Configuration);

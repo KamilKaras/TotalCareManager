@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace TotalCareManager.Shared.Messaging.Query
+namespace TotalCareManager.Shared.Messaging.Query.Interfaces
 {
     public interface IQuery<out TResult> : IRequest<TResult>
     {

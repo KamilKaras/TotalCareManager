@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TotalCareManager.Shared.Messaging.Command;
+using TotalCareManager.Shared.Messaging.Command.Interfaces;
 using TotalCareManager.Shared.Messaging.Query;
 
 namespace TotalCareManager.Api.Shared.Controllers

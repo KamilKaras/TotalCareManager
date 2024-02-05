@@ -1,7 +1,8 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using TotalCareManager.Shared.Messaging.Query.Interfaces;
 
-namespace TotalCareManager.Shared.Messaging.Query
+namespace TotalCareManager.Shared.Messaging.Query.Implementations
 {
     public abstract class QueryHandler<TQuery, TResult> : IRequestHandler<TQuery, TResult>
         where TQuery : IQuery<TResult>

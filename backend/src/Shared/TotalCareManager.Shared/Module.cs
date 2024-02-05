@@ -1,8 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using TotalCareManager.Shared.DomainEventDispatching;
-using TotalCareManager.Shared.Messaging.Command;
-using TotalCareManager.Shared.Messaging.Events.EventBus;
+using TotalCareManager.Shared.DbAccess.Implementations;
+using TotalCareManager.Shared.DbAccess.Interfaces;
+using TotalCareManager.Shared.DomainEventDispatching.Implementations;
+using TotalCareManager.Shared.DomainEventDispatching.Interfaces;
+using TotalCareManager.Shared.Messaging.Command.Implementations;
+using TotalCareManager.Shared.Messaging.Command.Interfaces;
+using TotalCareManager.Shared.Messaging.Events.EventBus.Implementations;
+using TotalCareManager.Shared.Messaging.Events.EventBus.Interfaces;
 
 namespace TotalCareManager.Shared
 {
@@ -14,7 +19,9 @@ namespace TotalCareManager.Shared
             services.AddSingleton<ICommandBus, CommandBus>();
             services.AddSingleton<IEventBus, EventBus>();
             services.AddScoped<IDomainEventsDispatcher, DomainEventsDispatcher>();
+            services.AddScoped(typeof(IDomainRepository<,>), typeof(DomainRepository<,>));
             services.AddScoped(typeof(IDomainEventsAccessor), typeof(DomainEventsAccessor<TDbContext>));
+            services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork<TDbContext>));
 
             return services;
         }

@@ -1,4 +1,4 @@
-﻿using TotalCareManager.Shared.Messaging.Command;
+﻿using TotalCareManager.Shared.Messaging.Command.Interfaces;
 using TotalCareManager.Shared.Messaging.Events.IntegrationEvents;
 using UserAccess.Aplication.Features.RegisterClub;
 using UserAccess.Domain.ClubRegistrations.Events;

@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TotalCareManager.Shared.Domain;
+using TotalCareManager.Shared.Domain.Interfaces;
+using TotalCareManager.Shared.DomainEventDispatching.Interfaces;
 
-namespace TotalCareManager.Shared.DomainEventDispatching
+namespace TotalCareManager.Shared.DomainEventDispatching.Implementations
 {
     internal sealed class DomainEventsAccessor<T> : IDomainEventsAccessor
         where T : DbContext

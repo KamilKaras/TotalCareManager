@@ -1,4 +1,6 @@
-﻿namespace TotalCareManager.Shared.Domain
+﻿using TotalCareManager.Shared.Domain.Interfaces;
+
+namespace TotalCareManager.Shared.Domain.Implementations
 {
     public abstract class DomainEvent : IDomainEvent
     {

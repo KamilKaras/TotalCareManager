@@ -1,6 +1,6 @@
 ﻿using MediatR;
-using TotalCareManager.Shared.Domain;
-using TotalCareManager.Shared.Messaging.Command;
+using TotalCareManager.Shared.Domain.Interfaces;
+using TotalCareManager.Shared.Messaging.Command.Interfaces;
 
 namespace TotalCareManager.Shared.Messaging.Events.IntegrationEvents
 {

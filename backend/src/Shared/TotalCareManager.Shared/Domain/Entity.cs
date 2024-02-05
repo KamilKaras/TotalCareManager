@@ -1,4 +1,6 @@
-﻿using TotalCareManager.Shared.Exceptions;
+﻿using TotalCareManager.Shared.Domain.Implementations;
+using TotalCareManager.Shared.Domain.Interfaces;
+using TotalCareManager.Shared.Exceptions;
 
 namespace TotalCareManager.Shared.Domain
 {
