@@ -19,7 +19,6 @@ namespace TotalCareManager.Shared
             services.AddSingleton<ICommandBus, CommandBus>();
             services.AddSingleton<IEventBus, EventBus>();
             services.AddScoped<IDomainEventsDispatcher, DomainEventsDispatcher>();
-            services.AddScoped(typeof(IDomainRepository<,>), typeof(DomainRepository<,>));
             services.AddScoped(typeof(IDomainEventsAccessor), typeof(DomainEventsAccessor<TDbContext>));
             services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork<TDbContext>));
 
