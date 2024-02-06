@@ -1,5 +1,4 @@
 ﻿using TotalCareManager.Shared.Domain;
-using UserAccess.Domain.ClubRegistrations.Enumerations;
 using UserAccess.Domain.ClubRegistrations.Events;
 using UserAccess.Domain.UserRegistrations.Entities;
 
@@ -7,17 +6,14 @@ namespace UserAccess.Domain.ClubRegistrations.Entities
 {
     public sealed class ClubRegistration : Entity<ClubRegistrationId>
     {
-        private readonly DateTimeOffset _registeredAt = DateTimeOffset.UtcNow;
-        private DateTimeOffset? _confirmedAt;
-        private ClubType _clubType;
+        private string _clubType;
         private string _clubName;
         private string _clubNip;
-        private UserRegistrationId? _clubOwner;
 
         public ClubRegistration(
             string clubName,
             string clubNip,
-            ClubType clubType
+            string clubType
             )
         {
             Id = new ClubRegistrationId(Guid.NewGuid());
@@ -35,10 +31,6 @@ namespace UserAccess.Domain.ClubRegistrations.Entities
 
         public void ChangeClubOwner(UserRegistrationId ownerId)
         {
-            if (_clubOwner == ownerId)
-                return;
-
-            _clubOwner = ownerId;
         }
 
         public void ChangeClubName(string clubName)
@@ -49,7 +41,7 @@ namespace UserAccess.Domain.ClubRegistrations.Entities
             _clubName = clubName;
         }
 
-        public void ChangeClubType(ClubType clubType)
+        public void ChangeClubType(string clubType)
         {
             if (_clubType == clubType)
                 return;
@@ -59,7 +51,6 @@ namespace UserAccess.Domain.ClubRegistrations.Entities
 
         public void Confirm()
         {
-            _confirmedAt = DateTimeOffset.UtcNow;
         }
     }
 }

@@ -2,6 +2,8 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TotalCareManager.Shared;
+using UserAccess.Aplication.Repositories;
+using UserAccess.Infrastructure.Repositories;
 
 namespace UserAccess.Infrastructure
 {
@@ -24,6 +26,9 @@ namespace UserAccess.Infrastructure
                         builder => builder.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery));
                     _dbContextBuilder.EnableDetailedErrors();
                 });
+
+            services.AddScoped<IClubRegistrationRepository, ClubRegistrationRepository>();
+
             return services;
         }
     }

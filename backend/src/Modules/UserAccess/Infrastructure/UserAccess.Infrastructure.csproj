@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Shared\TotalCareManager.Shared\TotalCareManager.Shared.csproj" />
+    <ProjectReference Include="..\Aplication\UserAccess.Aplication.csproj" />
     <ProjectReference Include="..\Domain\UserAccess.Domain.csproj" />
   </ItemGroup>
 
