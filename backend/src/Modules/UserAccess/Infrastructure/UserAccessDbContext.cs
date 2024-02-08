@@ -15,10 +15,7 @@ namespace UserAccess.Infrastructure
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(
-                GetType()
-                    .Assembly
-            );
+            modelBuilder.ApplyConfigurationsFromAssembly(AssemblyReference.Assembly);
         }
     }
 }

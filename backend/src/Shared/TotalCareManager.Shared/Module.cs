@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using TotalCareManager.Shared.DbAccess;
 using TotalCareManager.Shared.DbAccess.Implementations;
 using TotalCareManager.Shared.DbAccess.Interfaces;
 using TotalCareManager.Shared.DomainEventDispatching.Implementations;
@@ -21,6 +23,7 @@ namespace TotalCareManager.Shared
             services.AddScoped<IDomainEventsDispatcher, DomainEventsDispatcher>();
             services.AddScoped(typeof(IDomainEventsAccessor), typeof(DomainEventsAccessor<TDbContext>));
             services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork<TDbContext>));
+            services.AddScoped(typeof(IPipelineBehavior<,>), typeof(UnitOfWorkBehavior<,>));
 
             return services;
         }
