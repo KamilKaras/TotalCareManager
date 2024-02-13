@@ -1,12 +1,11 @@
 ﻿using MediatR;
-using System.Transactions;
 using TotalCareManager.Shared.DbAccess.Interfaces;
 using TotalCareManager.Shared.Messaging.Command.Interfaces;
 
 namespace TotalCareManager.Shared.DbAccess
 {
     public sealed class UnitOfWorkBehavior<TCommand, TResponse> : IPipelineBehavior<TCommand, TResponse>
-        where TCommand : class, ICommand
+        where TCommand : class, ICommand<TResponse>
     {
         private readonly IUnitOfWork _unitOfWork;
 
@@ -23,15 +22,10 @@ namespace TotalCareManager.Shared.DbAccess
             if (command.GetType() != typeof(TCommand))
                 return await next();
 
-            using (var transactionScope = new TransactionScope())
-            {
-                var response = await next();
-                await _unitOfWork.SaveChangesAsync(cancellationToken);
+            var response = await next();
+            await _unitOfWork.SaveChangesAsync(cancellationToken);
 
-                transactionScope.Complete();
-
-                return response;
-            }
+            return response;
         }
     }
 }

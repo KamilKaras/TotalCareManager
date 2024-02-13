@@ -21,7 +21,7 @@ namespace UserAccess.Domain.ClubRegistrations.Entities
             _clubNip = clubNip;
             _clubType = clubType;
 
-            AddDomainEvent(new ClubRegisterDomainEvent(Id, "", "", ""));
+            AddDomainEvent(new ClubRegisteredDomainEvent(Id, "", "", ""));
         }
 
         protected ClubRegistration()

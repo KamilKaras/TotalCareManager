@@ -1,31 +1,24 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TotalCareManager.Shared.Domain;
 using TotalCareManager.Shared.Domain.Interfaces;
-using TotalCareManager.Shared.DomainEventDispatching.Interfaces;
 
 namespace TotalCareManager.Shared.DomainEventDispatching.Implementations
 {
-    internal sealed class DomainEventsAccessor<T> : IDomainEventsAccessor
-        where T : DbContext
+    public abstract class DomainEventsAccessor
     {
-        private readonly T _context;
-
-        public DomainEventsAccessor(T context)
+        protected void ClearAllDomainEvents<T>(T context)
+            where T : DbContext
         {
-            _context = context;
-        }
-
-        public void ClearAllDomainEvents()
-        {
-            _context.ChangeTracker.Entries<Entity>()
+            context.ChangeTracker.Entries<Entity>()
                 .Where(w => w.Entity.DomainEvents.Any())
                 .ToList()
                 .ForEach(f => f.Entity.ClearDomainEvents());
         }
 
-        public IReadOnlyList<IDomainEvent> GetAllDomainEvents()
+        protected IReadOnlyList<IDomainEvent> GetAllDomainEvents<T>(T context)
+            where T : DbContext
         {
-            var events = _context.ChangeTracker.Entries<Entity>()
+            var events = context.ChangeTracker.Entries<Entity>()
                 .Where(w => w.Entity.DomainEvents.Any())
                 .SelectMany(sm => sm.Entity.DomainEvents)
                 .ToList();

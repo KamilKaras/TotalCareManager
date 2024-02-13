@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Shared\TotalCareManager.Shared\TotalCareManager.Shared.csproj" />
     <ProjectReference Include="..\Domain\UserAccess.Domain.csproj" />
+    <ProjectReference Include="..\IntegrationEvents\UserAccess.IntegratonEvents.csproj" />
   </ItemGroup>
 
   <ItemGroup>

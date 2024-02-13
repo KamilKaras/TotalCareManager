@@ -1,28 +1,27 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using TotalCareManager.Shared.DomainEventDispatching.Interfaces;
-using TotalCareManager.Shared.Messaging.Events.EventBus.Interfaces;
 
 namespace TotalCareManager.Shared.DomainEventDispatching.Implementations
 {
-    internal sealed class DomainEventsDispatcher : IDomainEventsDispatcher
+    public sealed class DomainEventsDispatcher : DomainEventsAccessor, IDomainEventsDispatcher
     {
-        private readonly IEventBus _eventBus;
-        private readonly IDomainEventsAccessor _domainEventsAccessor;
+        private readonly IPublisher _publisher;
         private readonly ILogger<DomainEventsDispatcher> _logger;
 
         public DomainEventsDispatcher(
-            IEventBus eventBus,
-            IDomainEventsAccessor domainEventsAccessor,
+            IPublisher publisher,
             ILogger<DomainEventsDispatcher> logger)
         {
-            _eventBus = eventBus;
-            _domainEventsAccessor = domainEventsAccessor;
+            _publisher = publisher;
             _logger = logger;
         }
 
-        public async Task DispatchEvents()
+        public async Task DispatchEvents<T>(T context)
+            where T : DbContext
         {
-            var events = _domainEventsAccessor.GetAllDomainEvents();
+            var events = GetAllDomainEvents(context);
 
             _logger.LogInformation("DomianEventDispatcher access events amount {count}", events.Count);
 
@@ -32,9 +31,9 @@ namespace TotalCareManager.Shared.DomainEventDispatching.Implementations
                     .FullName;
                 try
                 {
-                    await _eventBus.Publish(@event);
+                    await _publisher.Publish(@event);
 
-                    _logger.LogInformation("Norification {name} published", name);
+                    _logger.LogInformation("Notification {name} published", name);
                 }
                 catch (Exception ex)
                 {
@@ -42,7 +41,7 @@ namespace TotalCareManager.Shared.DomainEventDispatching.Implementations
                 }
             }
 
-            _domainEventsAccessor.ClearAllDomainEvents();
+            ClearAllDomainEvents(context);
         }
     }
 }

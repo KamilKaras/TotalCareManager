@@ -3,9 +3,9 @@ using UserAccess.Domain.ClubRegistrations.Entities;
 
 namespace UserAccess.Domain.ClubRegistrations.Events
 {
-    public class ClubRegisterDomainEvent : DomainEvent
+    public class ClubRegisteredDomainEvent : DomainEvent
     {
-        public ClubRegisterDomainEvent(
+        public ClubRegisteredDomainEvent(
             ClubRegistrationId clubRegistrationId,
             string userName,
             string userEmail,

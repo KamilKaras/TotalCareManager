@@ -1,11 +1,10 @@
 ﻿using MediatR;
-using TotalCareManager.Shared.Domain.Interfaces;
 using TotalCareManager.Shared.Messaging.Command.Interfaces;
 
 namespace TotalCareManager.Shared.Messaging.Events.IntegrationEvents
 {
     public abstract class IntegrationEventHandler<TEvent> : INotificationHandler<TEvent>
-        where TEvent : class, IDomainEvent
+        where TEvent : class, INotification
     {
         protected readonly ICommandBus _comandBus;
 
