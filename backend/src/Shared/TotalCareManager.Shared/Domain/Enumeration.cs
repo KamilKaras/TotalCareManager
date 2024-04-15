@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using TotalCareManager.Shared.Exceptions;
 
 namespace TotalCareManager.Shared.Domain
 {
@@ -21,7 +22,13 @@ namespace TotalCareManager.Shared.Domain
         public static bool Exists(int id) => GetAll()
            .Any(x => x.Id == id);
 
-        public static T? FromId(int id)
+        public static T FromId(int id)
+        {
+            var all = GetAll();
+            return all.FirstOrDefault(item => item.Id == id) ?? throw new ElementNotFoundException("na liście");
+        }
+
+        public static T? FromId(int? id)
         {
             var all = GetAll();
             return all.FirstOrDefault(item => item.Id == id) ?? null;

@@ -2,10 +2,10 @@
 using Microsoft.Extensions.DependencyInjection;
 using TotalCareManager.Shared;
 using TotalCareManager.Shared.DbAccess;
-using TotalCareManager.Shared.DomainEventDispatching.Implementations;
-using TotalCareManager.Shared.DomainEventDispatching.Interfaces;
-using UserAccess.Aplication.Repositories;
-using UserAccess.Infrastructure.Repositories.ClubRegistrations;
+using UserAccess.Aplication.Repositories.CompanyRegistrations;
+using UserAccess.Aplication.Repositories.UserRegistrations;
+using UserAccess.Infrastructure.Repositories.CompanyRegistrations;
+using UserAccess.Infrastructure.Repositories.UserRegistrations;
 
 namespace UserAccess.Infrastructure
 {
@@ -21,7 +21,8 @@ namespace UserAccess.Infrastructure
         private static IServiceCollection AddRepository(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddEntityFramework<UserAccessDbContext>(configuration);
-            services.AddScoped<IClubRegistrationRepository, ClubRegistrationRepository>();
+            services.AddScoped<ICompanyRegistrationRepository, CompanyRegistrationRepository>();
+            services.AddScoped<IUserRegistrationRepository, UserRegistrationRepository>();
 
             return services;
         }

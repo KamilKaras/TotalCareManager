@@ -2,7 +2,7 @@
 using TotalCareManager.Api.Modules.UserAccess.Requests;
 using TotalCareManager.Api.Shared.Controllers;
 using TotalCareManager.Shared.Messaging.Command.Interfaces;
-using UserAccess.Aplication.Features.RegisterClub;
+using UserAccess.Aplication.Features.RegisterCompany;
 using UserAccess.Aplication.Features.RegisterUser;
 
 namespace TotalCareManager.Api.Modules.UserAccess.Controllers
@@ -16,13 +16,15 @@ namespace TotalCareManager.Api.Modules.UserAccess.Controllers
         {
         }
 
-        [HttpPost("register-club")]
+        [HttpPost("register-company")]
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Guid>> RegisterClub(ClubRegisterRequest request)
+        public async Task<ActionResult<Guid>> RegisterCompany(CompanyRegisterRequest request)
         {
-            var command = new RegisterClubCommand(
-                request.ClubTypeId,
+            var command = new RegisterCompanyCommand(
+                request.CompanyTypeId,
+                request.NipNumber,
+                request.CompanyName,
                 request.UserName,
                 request.UserEmail,
                 request.UserPhone
@@ -34,12 +36,13 @@ namespace TotalCareManager.Api.Modules.UserAccess.Controllers
         [HttpPost("register-user")]
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<int>> RegisterUser(RegisterUserRequest request)
+        public async Task<ActionResult<Guid>> RegisterUser(RegisterUserRequest request)
         {
             var command = new RegisterUserCommand(
                 request.Name,
                 request.Email,
-                request.Phone
+                request.Phone,
+                request.CompanyId
                 );
             var id = await _commandBus.Execute(command);
             return OkOrNotFound(id);
