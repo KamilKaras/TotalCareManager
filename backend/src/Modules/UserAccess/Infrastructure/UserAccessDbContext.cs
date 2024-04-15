@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TotalCareManager.Shared.DomainEventDispatching.Interfaces;
-using UserAccess.Domain.ClubRegistrations.Entities;
+using UserAccess.Domain.Companies.Entities;
 using UserAccess.Domain.UserRegistrations.Entities;
 
 namespace UserAccess.Infrastructure
@@ -16,7 +16,7 @@ namespace UserAccess.Infrastructure
             _domainEventsDispatcher = domainEventsDispatcher;
         }
 
-        public DbSet<ClubRegistration> ClubRegistrations { get; set; }
+        public DbSet<CompanyRegistration> BusinessRegistrations { get; set; }
         public DbSet<UserRegistration> UserRegistrations { get; set; }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

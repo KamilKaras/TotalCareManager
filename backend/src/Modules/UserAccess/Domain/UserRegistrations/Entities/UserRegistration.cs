@@ -1,27 +1,32 @@
 ﻿using TotalCareManager.Shared.Domain;
+using TotalCareManager.Shared.ValueObjects;
+using UserAccess.Domain.Companies.Entities;
+using UserAccess.Domain.UserRegistrations.ValueObjects;
 
 namespace UserAccess.Domain.UserRegistrations.Entities
 {
     public sealed class UserRegistration : Entity<UserRegistrationId>
     {
         private readonly DateTimeOffset _registeredAt = DateTimeOffset.UtcNow;
-        private string _name;
-        private string _email;
-        private string _phone;
-        private string _password;
+        private readonly CompanyRegistrationId _companyId;
+        private DateTimeOffset? _confirmedAt;
+        private UserName _name;
+        private Email _email;
+        private Phone _phone;
+        private string? _password = null;
 
         public UserRegistration(
-            string name,
-            string email,
-            string phone,
-            string password
+            UserName name,
+            Email email,
+            Phone phone,
+            CompanyRegistrationId companyId
             )
         {
             Id = new UserRegistrationId(Guid.NewGuid());
             _name = name;
             _email = email;
             _phone = phone;
-            _password = password;
+            _companyId = companyId;
         }
 
         private UserRegistration()
@@ -29,7 +34,7 @@ namespace UserAccess.Domain.UserRegistrations.Entities
             //EF core
         }
 
-        public void ChangeName(string name)
+        public void ChangeName(UserName name)
         {
             if (_name == name)
                 return;
@@ -37,7 +42,7 @@ namespace UserAccess.Domain.UserRegistrations.Entities
             _name = name;
         }
 
-        public void ChangeEmail(string email)
+        public void ChangeEmail(Email email)
         {
             if (_email == email)
                 return;
@@ -45,7 +50,7 @@ namespace UserAccess.Domain.UserRegistrations.Entities
             _email = email;
         }
 
-        public void ChangePhone(string phone)
+        public void ChangePhone(Phone phone)
         {
             if (_phone == phone)
                 return;
